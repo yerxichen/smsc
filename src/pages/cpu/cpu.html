@@ -1,0 +1,35 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>cpu</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click)="detail(item.xxzjbh)">
+      <ion-thumbnail  item-start>
+        <img [src]="item.pic" style="width: 10rem;height: auto">
+      </ion-thumbnail >
+      <h2>{{item.title}}</h2>
+      <p>{{item.cpdw}}<span *ngIf="item.cpdw!=null">&emsp;&emsp;</span>{{item.scgy}}</p>
+      <p>{{item.jklx}}</p>
+      <p style="color: #f53d3d" *ngIf="item.price!='暂无报价'&&item.price!='新产品'&&item.price!='概念产品'"><span style="font-size: 1rem">￥</span><span style="font-size: 1.8rem">{{item.price.split("￥")[1]}}</span></p>
+      <p *ngIf="item.price=='暂无报价'||item.price=='新产品'||item.price=='概念产品'">{{item.price}}</p>
+      <ion-icon item-end name="add-circle" style="color: dimgray" ></ion-icon>
+
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="数据加载中...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

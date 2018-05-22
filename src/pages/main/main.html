@@ -1,0 +1,85 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>主页</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background: gainsboro">
+  <ion-slides pager style="height: auto" autoplay="3000" loop="true">
+
+    <ion-slide>
+      <img src="./assets/imgs/C49_Z.jpg">
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./assets/imgs/VxOCs_45.jpg">
+    </ion-slide>
+
+    <ion-slide>
+      <img src="./assets/imgs/i76950X_S45.jpg">
+    </ion-slide>
+
+    <ion-slide>
+      <img  src="./assets/imgs/R71700X_Z1.jpg">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-grid style="background: white;text-align:center;" >
+    <ion-row>
+      <ion-col col-3 >
+        <div (click)="goPage(1)">
+          <img src="./assets/imgs/cpu.png">
+          <div>CPU</div>
+        </div>
+      </ion-col>
+      <ion-col col-3>
+        <div (click)="goPage(2)">
+          <img src="./assets/imgs/video-card.png">
+          <div>显卡</div>
+        </div>
+      </ion-col>
+      <ion-col col-3>
+        <div (click)="goPage(3)">
+          <img src="./assets/imgs/hdd.png">
+          <div>硬盘</div>
+        </div>
+      </ion-col>
+      <ion-col col-3>
+        <div (click)="goPage(4)">
+          <img src="./assets/imgs/zb.png">
+          <div>主板</div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-3>
+        <div (click)="goPage(5)">
+          <img src="./assets/imgs/cooler.png">
+          <div>散热</div>
+        </div>
+      </ion-col>
+      <ion-col col-3>
+        <div (click)="goPage(6)">
+          <img src="./assets/imgs/ram-memory.png">
+          <div>内存</div>
+        </div>
+      </ion-col>
+
+      <ion-col col-3>
+        <div (click)="goPage(7)">
+          <img src="./assets/imgs/power.png">
+          <div>电源</div>
+        </div>
+
+      </ion-col>
+      <ion-col col-3>
+        <img src="./assets/imgs/gd.png">
+        <div>更多</div>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>
